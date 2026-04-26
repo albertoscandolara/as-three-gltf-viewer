@@ -12,8 +12,8 @@
     "image": "preview.png"
   },
   "20210701": {
-    "folder": "20210701 - m&m",
-    "title": "m&m",
+    "folder": "20210701 - mEm",
+    "title": "m&m's",
     "description": "Two of the iconic M&M's Spokescandies, posed together in a playful 3D scene.",
     "image": "preview.png"
   },
@@ -40,11 +40,5 @@
     "title": "Robot 02",
     "description": "A 3D robot character with a friendly 'hello' animation, created for animation practice.",
     "image": "preview.png"
-  },
-  "demo": {
-    "folder": "demo",
-    "title": "demo",
-    "description": "",
-    "image": ""
   }
 }
