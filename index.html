@@ -1,46 +1,77 @@
 <!doctype html>
+<html lang="en">
 <head>
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<title>glTF Viewer</title>
-	<meta
-		name="viewport"
-		content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
-	/>
-	<meta name="author" content="Don McCurdy" />
-	<meta name="description" content="Drag-and-drop preview tool for glTF 2.0 3D models." />
-	<link rel="canonical" href="https://gltf-viewer.donmccurdy.com/" />
+	<title>Alberto Scandone — 3D Model Viewer</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta name="description" content="Personal gallery of interactive 3D models. Built on three.js and glTF 2.0." />
 	<link rel="shortcut icon" href="/favicon.ico" />
 	<link rel="stylesheet" href="style.css" />
-	<link href="https://fonts.googleapis.com/css?family=Raleway:300,400" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
 	<script defer type="module" src="src/app.js"></script>
 </head>
 <body>
-	<header>
-		<h1><a href="/">glTF Viewer</a></h1>
-	</header>
-	<main class="wrap">
-		<div class="dropzone">
-			<div class="placeholder">
-				<p>Drag glTF 2.0 file or folder here</p>
+
+	<!-- ===================== LANDING VIEW ===================== -->
+	<div id="landing-view" hidden>
+		<header class="landing-header">
+			<div class="landing-header__inner">
+				<a href="/" class="landing-logo">AS</a>
 			</div>
-			<div class="upload-btn">
-				<input type="file" name="file-input[]" id="file-input" multiple="" />
-				<label for="file-input">
-					<svg
-						xmlns="http://www.w3.org/2000/svg"
-						width="20"
-						height="17"
-						viewBox="0 0 20 17"
-					>
-						<path
-							d="M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z"
-						></path>
-					</svg>
-					<span>Choose file</span>
-				</label>
+		</header>
+
+		<section class="landing-hero">
+			<div class="landing-hero__inner">
+				<span class="landing-hero__pill">WebGL &nbsp;·&nbsp; three.js &nbsp;·&nbsp; glTF 2.0</span>
+				<h1 class="landing-hero__title">3D Model<br />Viewer</h1>
+				<p class="landing-hero__subtitle">
+					A personal gallery of interactive 3D models rendered in real-time WebGL.
+					Built on <a href="https://threejs.org/" target="_blank" rel="noopener">three.js</a>
+					and adapted from <a href="https://gltf-viewer.donmccurdy.com/" target="_blank" rel="noopener">three-gltf-viewer</a>.
+				</p>
 			</div>
+			<div class="landing-hero__glow"></div>
+		</section>
+
+		<section class="landing-section">
+			<div class="landing-section__header">
+				<h2 class="landing-section__title">Available Models</h2>
+				<p class="landing-section__sub">Click "View Model" to explore interactive 3D models</p>
+			</div>
+			<div id="landing-cards" class="landing-cards"></div>
+		</section>
+	</div>
+
+	<!-- ===================== VIEWER VIEW ===================== -->
+	<div id="viewer-view" hidden>
+		<header>
+			<button id="back-btn" class="back-btn" aria-label="Back to gallery">
+				<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+					<polyline points="15 18 9 12 15 6"></polyline>
+				</svg>
+				<span>Gallery</span>
+			</button>
+			<h1><a href="/">3D Viewer</a></h1>
+		</header>
+		<main class="wrap">
+			<div class="dropzone">
+				<div class="upload-btn">
+					<input type="file" name="file-input[]" id="file-input" multiple="" />
+					<label for="file-input">
+						<svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 20 17">
+							<path d="M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z"></path>
+						</svg>
+						<span>Choose file</span>
+					</label>
+				</div>
+			</div>
+			<div class="app-spinner" hidden>
+			<div class="spinner-ring"></div>
+			<p class="spinner-label">Loading model...</p>
 		</div>
-		<div class="spinner"></div>
-	</main>
+		</main>
+	</div>
+
 </body>
+</html>

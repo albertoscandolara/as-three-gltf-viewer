@@ -1,0 +1,50 @@
+{
+  "20210625": {
+    "folder": "20210625 - Allosaurus",
+    "title": "Allosaurus",
+    "description": "An Allosaurus dinosaur 3D model created using basic geometries in Blender.",
+    "image": "preview.png"
+  },
+  "20210626": {
+    "folder": "20210626 - Stegosaurus",
+    "title": "Stegosaurus",
+    "description": "My first attempt at sculpting: a Stegosaurus dinosaur, modeled and painted in Blender.",
+    "image": "preview.png"
+  },
+  "20210701": {
+    "folder": "20210701 - m&m",
+    "title": "m&m",
+    "description": "Two of the iconic M&M's Spokescandies, posed together in a playful 3D scene.",
+    "image": "preview.png"
+  },
+  "20210702": {
+    "folder": "20210702 - Harp",
+    "title": "Harp",
+    "description": "A detailed 3D model of a classic harp, the elegant stringed musical instrument.",
+    "image": "preview.png"
+  },
+  "20220601": {
+    "folder": "20220601 - Louvre Pyramid",
+    "title": "Louvre pyramid",
+    "description": "A Stegosaurus dinosaur 3D model sculpted and exported from Blender.",
+    "image": "preview.png"
+  },
+  "20220625": {
+    "folder": "20220625 - Robot 01",
+    "title": "Robot 01",
+    "description": "A simple 3D robot character, designed and modeled for animation experiments.",
+    "image": "preview.png"
+  },
+  "20220716": {
+    "folder": "20220716 - Robot 02",
+    "title": "Robot 02",
+    "description": "A 3D robot character with a friendly 'hello' animation, created for animation practice.",
+    "image": "preview.png"
+  },
+  "demo": {
+    "folder": "demo",
+    "title": "demo",
+    "description": "",
+    "image": ""
+  }
+}
